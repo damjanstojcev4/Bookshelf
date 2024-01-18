@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadAjaxBooks()">
+    <h1>Front - End Bookshelf</h1>
+    <div id="form">
+        <form>
+            <p>ID <br /> 
+                <input type="text" id="book_id" value="" /> <button type="button"
+                    onclick="loadOneBook()">Read</button>
+            </p>
+            <p>Title <br />
+                <input type="text" id="title" value="" />
+            </p>
+            <p>ISBN <br />
+                <input type="text" id="isbn" value="" />
+            </p>
+            <p>Year <br />
+              <input type="text" id="year" value="" />
+           </p>
+           <p>Edition <br />
+            <input type="text" id="edition" value="" />
+           </p>
+           <p>Publisher <br />
+            <input type="text"  id="publisher_id" value="" />
+           </p>
+           <p>Author <br />
+            <!-- <input type="text" id="author_id" value="" /> -->
+            <select name="authors" id="author_id">
+              </select>
+           </p>
+           <p>Category <br />
+            <!-- <input type="text" id="category_id" value="" /> -->
+            <select name="authors" id="category_id">
+              </select>
+           </p>
+           <p>Formats <br />
+            <!-- <input type="text" id="format_id" value="" /> -->
+            <select name="authors" id="format_id">
+              </select>
+           </p>
+            <br />
+            <br />
+            <button type="button" onclick="addBook()">Add</button>
+            <button type="button" onclick="updateBook()">Update</button>
+            <button type="button" onclick="deleteBook()">Delete</button>
+            <button type="button" onclick="clearForm()">Clear</button>
+        </form>
+    </div>
+
+    <!-- <div id="list">
+        <p>Table with books data.</p>
+    </div> -->
+    <table id="result">
+
+    </table>
+
+    <script src="ajax.js"></script>
+    <script src="bookshelf.js"></script>
+</body>
+
+</html>
